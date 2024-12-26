@@ -4,13 +4,13 @@ import java.util.HashSet;
 public class RepeatSearch {
     public static ArrayList<Integer> find(ArrayList<Integer> listOne, ArrayList<Integer> listTwo) {
         HashSet<Integer> h = new HashSet<Integer>(listOne);
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        HashSet<Integer> h2 = new HashSet<Integer>();
 
         for (Integer number : listTwo) {
             if (h.contains(number)) {
-                result.add(number);
+                h2.add(number);
             }
         }
-        return result;
+        return new ArrayList<>(h2) ;
     }
 }
